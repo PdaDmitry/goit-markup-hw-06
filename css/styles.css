@@ -157,11 +157,11 @@ button {
 /* Styles Hero Section */
 
 .hero{
-    text-align: center;
+    /* text-align: center;
     background: var(--NAVY-BLUE, #2E2F42);
     padding-top: 188px;
     padding-bottom: 188px;
-    /* background-image: url(../images/people-office-hero-section.jpg); */
+   
     max-width: 1440px;
     margin: 0 auto;
     background-repeat: no-repeat;
@@ -170,22 +170,50 @@ button {
     background-image: linear-gradient(to bottom,
                 rgba(46, 47, 66, 0.70),
                 rgba(46, 47, 66, 0.70)),
-                url(../images/people-office-hero-section.jpg);    
+                url(../images/people-office-hero-section.jpg);     */
 }
 
-/* .hero-cont{
+.hero-container{
+    width: 320px;
+    padding: 72px 0;
+    margin: 0 auto;
+    text-align: center;
+    background: var(--NAVY-BLUE, #2E2F42);
 
-} */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(
+                rgba(46, 47, 66, 0.70),
+                rgba(46, 47, 66, 0.70)),
+            url(../images/people-office-hero-section-mob-1x.jpg);
+}
+
+@media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-container{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: linear-gradient(
+                    rgba(46, 47, 66, 0.70),
+                    rgba(46, 47, 66, 0.70)),
+                url(../images/people-office-hero-section-mob-2x.jpg);
+    }
+}
 
 .hero-main-title{
-    font-size: 56px;
+    width: 216px;
+    text-align: center;
+    font-size: 36px;
     font-weight: 700;
-    line-height: 1.07;
+    line-height: 1.11;
     letter-spacing: 0.02em;
+    text-transform: capitalize;
     color: var(--WHITE, #FFF);
-    max-width: 496px;
     margin: 0 auto;
-    margin-bottom: 48px;
+    margin-bottom: 72px;
 }
 
 .hero-btn{
@@ -193,7 +221,7 @@ button {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    cursor: pointer;
+    /* cursor: pointer; */
     height: 56px;
     border: none;
     border-radius: 4px;
@@ -206,13 +234,13 @@ button {
     gap: 10px;
     margin: 0 auto;
     min-width: 169px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
-.hero-btn:hover,
+/* .hero-btn:hover,
 .hero-btn:focus{
     background: var(--OCEAN, #404BBF);
-}
+} */
 
 /* Styles Our quality */
 
@@ -308,6 +336,7 @@ button {
 
 .team-menu-item{
     /* flex-basis: calc((100% - 72px)/4); */
+    width: 100%;
     border-radius: 0px 0px 4px 4px;
     background: var(--WHITE, #FFF);
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -354,15 +383,15 @@ button {
     justify-content: center;
     height: 100%;
     border-radius: 50%;
+    /* cursor: none; */
     background-color: #4D5AE5;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-media-link:hover,
+/* .social-media-link:hover,
 .social-media-link:focus {
-    /* background-color: #31d0AA; */
     background-color: #404bbf;
-}
+} */
 
 .network{
     /* width: 16px;
@@ -375,6 +404,7 @@ button {
 
 .portfolio-menu-item{
     /* width: calc((100% - 24px * 2) / 3); */
+    width: 100%;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
@@ -871,6 +901,44 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         width: 768px;
     }
 
+    /* Hero Section */
+
+    .hero-container {
+        width: 768px;
+        padding: 112px 0;
+    
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: linear-gradient(
+            rgba(46, 47, 66, 0.70),
+            rgba(46, 47, 66, 0.70)),
+            url(../images/people-office-hero-section-tab-1x.jpg);
+        }
+    
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        .hero-container {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-image: linear-gradient(
+                rgba(46, 47, 66, 0.70),
+                rgba(46, 47, 66, 0.70)),
+                    url(../images/people-office-hero-section-tab-2x.jpg);
+            }
+        }
+
+    .hero-main-title{
+        width: 496px; 
+        font-size: 56px;
+        line-height: 1.07;
+        margin-bottom: 36px;
+    }
+
+    /* .hero-btn{} */
+
      /* Our quality */
 
     .quality-menu{
@@ -940,6 +1008,49 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         padding-bottom: 120px;
     }
 
+         /* Hero Section */
+    
+    .hero-container {
+        width: 1440px;
+        padding: 188px 0;
+        margin: 0 auto;
+    
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: linear-gradient(to bottom,
+            rgba(46, 47, 66, 0.70),
+            rgba(46, 47, 66, 0.70)),
+            url(../images/people-office-hero-section-1x.jpg);
+         }
+    
+        @media (min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi),
+         (min-resolution: 2dppx) {
+             .hero-container {
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                background-image: linear-gradient(to bottom,
+                    rgba(46, 47, 66, 0.70),
+                    rgba(46, 47, 66, 0.70)),
+                    url(../images/people-office-hero-section-2x.jpg);
+             }
+         }
+    
+        /* .hero-main-title {
+         } */
+    
+        .hero-btn {
+            cursor: pointer;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hero-btn:hover,
+        .hero-btn:focus{
+            background: var(--OCEAN, #404BBF);
+        }
+
     /* Our quality */
 
     .quality-menu{
@@ -999,6 +1110,11 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
 
     .img-team{
         margin: 0;
+    }
+
+    .social-media-link:hover,
+    .social-media-link:focus {
+        background-color: #404bbf;
     }
     
 
