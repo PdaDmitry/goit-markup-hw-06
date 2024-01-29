@@ -50,19 +50,24 @@ button {
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 1px 6px rgba(46, 47, 66, 0.08);
+        
 }
 
 .cont-header{
+    width: 320px;
+    padding: 16px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: var(--WHITE, #FFF);
+    
 }
 
-.page-nav{
+/* .page-nav{
     display: flex;
     align-items: center;
-}
+} */
 
 .logo{
     font-family: 'Raleway', sans-serif;
@@ -72,8 +77,8 @@ button {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--IRIS, #4D5AE5);
-    margin-right: 76px;
-    padding: 24px 0;
+    /* margin-right: 76px; */
+    /* padding: 24px 0; */
     display: block;
 }
 
@@ -87,14 +92,26 @@ button {
     color: var(--NAVY-BLUE, #2E2F42);
 }
 
+.menu-mob-open-btn {
+    background-color: transparent;
+    border: none;
+}
+
+.menu-mob-icon-open-btn {
+    display: flex;
+        flex-shrink: 0;
+    fill: #2F2F37;
+}
+
 .menu{
     list-style-type: none;
 }
 
 .cont-header-menu-item{
-    display: flex;
-    align-items: center;
-    gap: 40px;
+    display: none;
+    /* display: flex; */
+    /* align-items: center; */
+    /* gap: 40px; */
 }
 
 .menu-link{
@@ -135,9 +152,10 @@ button {
 }
 
 .cont-menu-address-item{
-    display: flex;
-    align-items: center;
-    gap: 40px;
+    display: none;
+    /* display: flex; */
+    /* align-items: center; */
+    /* gap: 40px; */
 }
 
 .menu-address-link{   
@@ -145,7 +163,7 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--SLATE, #434455);
-    padding: 24px 0;
+    /* padding: 24px 0; */
     display: block;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -153,6 +171,137 @@ button {
 .menu-address-link:hover,
 .menu-address-link:focus{
     color: var(--OCEAN, #404BBF);
+}
+
+.mob-menu {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #FFF;
+    padding: 24px 24px 40px 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: auto;
+}
+
+.mob-first-block{
+    margin-bottom: 30px;
+}
+
+.mod-btn-icon-open {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    margin-bottom: 24px;
+}
+
+.mod-btn-icon-open:hover,
+.mod-btn-icon-open:focus {
+    background-color: #404BBF;
+    fill: #FFFFFF;
+    border: none;
+}
+
+.mod-btn-icon-cross-open {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* .mob-cont-header-menu-item {
+    margin-bottom: 150px;
+} */
+
+.mob-menu-item:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.mob-menu-link {
+    display: block;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--NAVY-BLUE, #2E2F42);
+}
+
+.mob-menu-link-studio {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--OCEAN, #404BBF);
+    padding-top: 72px;
+}
+
+.mob-page-address {
+    font-style: normal;
+    margin-bottom: 48px;
+}
+
+.mob-cont-menu-address-item {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+.mob-menu-address-item:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.mob-menu-address-link-tel {
+    color: var(--IRIS, #4D5AE5);
+}
+
+.mob-menu-address-link-email{
+    color: var(--SLATE, #434455);
+}
+
+.mob-social-media {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.mob-social-media-item {
+    width: 40px;
+    height: 40px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-social-media-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-radius: 50%;
+    cursor: default;
+    background-color: #4d5ae5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-network {
+    fill: #F4F4FD;
 }
 
 /* Styles Hero Section */
@@ -550,7 +699,6 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
 
 .footer-blok-social-media{
     margin-bottom: 72px;
- 
 }
 
 .footer-social-media-text{
@@ -923,6 +1071,55 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         width: 768px;
     }
 
+    /* header */
+
+    .cont-header{
+        width: 768px;
+        padding: 0 16px;
+    }
+
+    .page-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        margin-right: 120px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .cont-header-menu-item {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .page-address {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+
+
+    .cont-menu-address-item {
+        display: block;
+    }
+
+    .menu-address-item:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    .menu-address-link {
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+    }
+
+    .menu-mob-open-btn{
+        display: none;
+    }
+
     /* Hero Section */
 
     .hero-container {
@@ -1077,32 +1274,83 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         /* padding-left: 15px; */
         /* padding-right: 15px; */
     }
+
+        /* header */
     
-    .section {
-        padding-top: 120px;
-        padding-bottom: 120px;
-    }
+        .cont-header {
+            width: 1158px;
+            padding: 0 16px;
+        }
+    
+        .page-nav {
+            display: flex;
+            align-items: center;
+        }
+    
+        .logo {
+            margin-right: 76px;
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+    
+        .cont-header-menu-item {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+    
+        .page-address {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    
+        .cont-menu-address-item {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+    
+        .menu-address-item:not(:last-child) {
+            margin-bottom: 0;
+        }
+    
+        .menu-address-link {
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            padding-top: 24px;
+                padding-bottom: 24px;
+        }
+    
+        .menu-mob-open-btn {
+            display: none;
+        }
+    
+        .section {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
 
          /* Hero Section */
     
-    .hero-container {
-        width: 1440px;
-        padding: 188px 0;
-        margin: 0 auto;
+        .hero-container {
+            width: 1440px;
+            padding: 188px 0;
+            margin: 0 auto;
     
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        background-image: linear-gradient(to bottom,
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-image: linear-gradient(to bottom,
             rgba(46, 47, 66, 0.70),
             rgba(46, 47, 66, 0.70)),
             url(../images/people-office-hero-section-1x.jpg);
-         }
+        }
     
         @media (min-device-pixel-ratio: 2),
          (min-resolution: 192dpi),
          (min-resolution: 2dppx) {
-             .hero-container {
+            .hero-container {
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
@@ -1110,21 +1358,20 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
                     rgba(46, 47, 66, 0.70),
                     rgba(46, 47, 66, 0.70)),
                     url(../images/people-office-hero-section-2x.jpg);
-             }
-         }
-    
-        /* .hero-main-title {
-         } */
-    
-        .hero-btn {
-            cursor: pointer;
-            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
         }
+    
+    
+    
+            .hero-btn {
+                cursor: pointer;
+                transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
 
-        .hero-btn:hover,
-        .hero-btn:focus{
-            background: var(--OCEAN, #404BBF);
-        }
+            .hero-btn:hover,
+            .hero-btn:focus{
+                background: var(--OCEAN, #404BBF);
+            }
 
     /* Our quality */
 

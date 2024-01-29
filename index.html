@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <!-- <header class="page-header">
-      <div class="container cont-header">
+    <header class="page-header">
+      <div class="cont-header">
         <nav class="page-nav">
           <a class="logo" href="./index.html"
             >Web<span class="logo-part-two">Studio</span></a
@@ -56,8 +56,84 @@
             </li>
           </ul>
         </address>
+        <button class="menu-mob-open-btn" type="button">
+          <svg class="menu-mob-icon-open-btn" width="16.8" height="14.4">
+            <use href="./images/icons.svg#icon-group"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mob-menu">
+        <div class="mob-first-block">
+          <button class="mod-btn-icon-open" type="button">
+            <svg class="mod-btn-icon-cross-open" width="8" height="8">
+              <use href="./images/icons.svg#icon-close-black-dp"></use>
+            </svg>
+          </button>
+          <ul class="menu mob-cont-header-menu-item">
+            <li class="mob-menu-item">
+              <a class="mob-menu-link mob-menu-link-studio" href="./index.html"
+                >Studio</a
+              >
+            </li>
+            <li class="mob-menu-item">
+              <a class="mob-menu-link" href="">Portfolio</a>
+            </li>
+            <li class="mob-menu-item">
+              <a class="mob-menu-link" href="">Contacts</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mob-second-blok">
+          <address class="mob-page-address">
+            <ul class="mob-menu-address menu mob-cont-menu-address-item">
+              <li class="mob-menu-address-item">
+                <a class="mob-menu-address-link-tel" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="mob-menu-address-item">
+                <a
+                  class="mob-menu-address-link-email"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+
+          <ul class="mob-social-media menu">
+            <li class="mob-social-media-item">
+              <a class="mob-social-media-link" href=""
+                ><svg class="mob-network" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-social-media-item">
+              <a class="mob-social-media-link" href=""
+                ><svg class="mob-network" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-social-media-item">
+              <a class="mob-social-media-link" href=""
+                ><svg class="mob-network" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-social-media-item">
+              <a class="mob-social-media-link" href=""
+                ><svg class="mob-network" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <main>
       <!-- Hero Section -->
       <section class="hero">
@@ -641,7 +717,7 @@
             </label>
             <button class="footer-btn" type="submit">
               Subscribe
-              <svg class="footer-last-blok-icon" width="24" height="24">
+              <svg class="footer-last-blok-icon" width="44" height="24">
                 <use href="./images/icons.svg#icon-frame"></use>
               </svg>
             </button>
